@@ -60,6 +60,15 @@
       margin-bottom: 10px;
       font-weight: bold;
     }
+    .service {
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.5s; /* Add transition for smooth zoom effect */
+    }
+
+    .service:hover {
+      transform: scale(1.1); /* Zoom in effect on hover */
+    }
     
 
   </style>
@@ -110,21 +119,21 @@
     <div class="row">
       <div class="col-md-4">
         <div class="service bg-light">
-          <img src="https://source.unsplash.com/400x400/?webdesign" class="img-fluid mb-3" alt="Web Design">
+          <img src="https://source.unsplash.com/400x400/?webdesign" class="img-fluid mb-3 zoom-effect" alt="Web Design">
           <h3>Web Design</h3>
           <p>We create stunning and responsive designs for your website.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="service bg-light">
-          <img src="https://source.unsplash.com/400x400/?webdevelopment" class="img-fluid mb-3" alt="Web Development">
+          <img src="https://source.unsplash.com/400x400/?webdevelopment" class="img-fluid mb-3 zoom-effect" alt="Web Development">
           <h3>Web Development</h3>
           <p>We develop custom websites tailored to your needs.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="service bg-light">
-          <img src="https://source.unsplash.com/400x400/?seo" class="img-fluid mb-3" alt="SEO Optimization">
+          <img src="https://source.unsplash.com/400x400/?seo" class="img-fluid mb-3 zoom-effect" alt="SEO Optimization">
           <h3>SEO Optimization</h3>
           <p>We optimize your website to rank higher in search engine results.</p>
         </div>
@@ -187,26 +196,26 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <!-- Custom JavaScript for sliding tiles -->
   <script>
-    /*$(document).ready(function(){
-      // Enable carousel for services
-      $('#serviceCarousel').carousel();
-      // Enable sliding tiles for services
-      $('.carousel-item').each(function(){
-        var minPerSlide = 3;
-        var next = $(this).next();
-        if (!next.length) {
-          next = $(this).siblings(':first');
-        }
-        next.children(':first-child').clone().appendTo($(this));
-        for (var i=0;i<minPerSlide;i++) {
-          next=next.next();
-          if (!next.length) {
-            next = $(this).siblings(':first');
+    $(document).ready(function() {
+      // Function to handle zoom effect when element enters viewport
+      function handleZoomEffect() {
+        $('.zoom-effect').each(function() {
+          if ($(this).offset().top < $(window).scrollTop() + $(window).height() && $(this).offset().top + $(this).height() > $(window).scrollTop()) {
+            $(this).css('transform', 'scale(1.1)');
+          } else {
+            $(this).css('transform', 'scale(1)');
           }
-          next.children(':first-child').clone().appendTo($(this));
-        }
+        });
+      }
+
+      // Event listener for scrolling
+      $(window).scroll(function() {
+        handleZoomEffect();
       });
-    });*/
+
+      // Initial check for elements in viewport
+      handleZoomEffect();
+    });
   </script>
 </body>
 </html>
