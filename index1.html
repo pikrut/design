@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="home1.css"/ rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="scripts.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shadows+Into+Light&family=Varela+Round&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+<main>
+    <div class="overlay close"></div>
+    <section class="nav-container">
+        <div class="mobile-menu-button">
+            <div class="mobile-menu-button-container">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+            </svg>
+        </div>
+        </div>
+        <div class="app-logo"></div>
+        <nav class="mobile-nav close">
+            <div class="close-btn">X</div>
+            <ul class="nav-items">
+              <li class="nav-item"><a href="#home">HOME</a></li>
+              <li class="nav-item"><a href="#aboutUs">ABOUT US</a></li>
+              <li class="nav-item"><a href="#contactUs">CONTACT</a></li>
+            </ul>
+          </nav>
+        <div class="nav-item-container">
+            <ul class="nav-items">
+                <li class="nav-item"><a href="#home">HOME</a></li>
+                <li class="nav-item"><a href="#aboutUs">ABOUT US</a></li>
+                <li class="nav-item"><a href="#contactUs">CONTACT</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="banner-section" id="home">
+        <div class="home-banner"></div>
+    </section>
+    <section class="services" >
+        <div class="our-services-heading">
+            <h2 class="details-heading">Our Services</h2>
+        </div>
+        <div class="service-desc-container">
+            <article class="service-desc service-webdesign">          
+                <div class="service-desc-icons web-design-icon"></div>              
+              <h2 class="service-headers">WEB DESIGN</h2>
+              <h3>Crafting Websites That Captivate and Convert Visitors Into Customers.</h3>
+              <ul class="service-desc-list-items">
+                  <li>Custom website design and development</li>
+                  <li>Responsive design for optimal viewing on all devices (desktop, tablet, mobile)</li>
+                  <li>Content management system (CMS) for easy updates</li>
+                  <li>Search engine optimization (SEO) foundation</li>
+              </ul>            
+          </article>
+          <article class="service-desc service-seo">
+              <div class="seo-icon">
+                  
+              </div>
+                      
+              <h2 class="service-headers">SEO</h2>
+              <h3>Boost Your Website Traffic and Visibility</h3>
+              <ul class="service-desc-list-items">
+                  <li>Keyword research and optimization</li>
+                  <li>On-page and off-page optimization</li>
+                  <li>Backlink building strategies</li>
+                  <li>Local SEO for targeted geographic reach</li>
+                  <li>Analytics reporting and tracking</li>
+              </ul>
+              <!-- <div class="learn-more-container">
+                  <button class="learn-more-button">Learn More</button>
+              </div> -->
+          </article>
+          <article class="service-desc service-appdevelopment">
+              <div class="service-desc-icons web-app-icon"></div>              
+              <h2 class="service-headers">App Development</h2>
+              <h3>Bring Your Mobile App Idea to Life</h3>
+              <ul class="service-desc-list-items">
+                  <li>Native app development for iOS and Android</li>
+                  <li>Cross-platform app development</li>
+                  <li>User interface (UI) and user experience (UX) design</li>
+                  <li>App store optimization (ASO)</li>
+                  <li>Ongoing maintenance and support</li>
+              </ul>
+              <!-- <div class="learn-more-container">
+                  <button class="learn-more-button">Learn More</button>
+              </div> -->
+          </article>
+        </div>
+        
+    </section>
+    <section class="about-us" id="aboutUs">
+        <div class="covering-container"></div>
+        <div class="our-services-heading">
+        <h2 class="details-heading">Who we are</h2>
+        </div>
+        <div class="about-us-icon"></div>
+        <article class="about-us-desc">
+            <p class="about-us-subtitle">
+                We're a passionate team of creative minds and technical wizards dedicated to building innovative and user-friendly web experiences. We bring a wealth of experience to the table, having tackled projects of all shapes and sizes. From sleek and modern landing pages to complex web apps, we've got you covered.
+            </p>
+            <h1 class="about-us-we-belive">We believe in</h1>
+            <h2 class="about-us-we-belive">The power of design</h2>
+            <h2 class="about-us-we-belive">Collaboration</h2>
+            <h2 class="about-us-we-belive">Innovation</h2>
+        </article>
+    </section>
+    <section class="contact-us" id="contactUs">
+        <div class="covering-container-contact-us"></div>
+        <h2 class="details-heading">Talk to us</h2>
+        <div class="contact-us-icon"></div>
+        <article>
+            <form id="contact-form">
+                <div class="form-group">
+                  <label for="name">Name (Optional):</label>
+                  <input type="text" id="name" name="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                </div>
+                <div class="form-group">
+                  <label for="message">Your Query:</label>
+                  <textarea id="message" name="message" required placeholder="Enter your message"></textarea>
+                </div>
+                <button type="submit">Send Query</button>
+              </form>
+              
+        </article>
+    </section>
+    <div class="scroll-top-button">
+        <i class="fas fa-arrow-up"></i>  </div>
+    <footer>
+        <div>Support</div>
+        <div>Contact Us</div>
+    </footer>
+    
+</main>
+<div class="overlay"></div>
+</body>
+</html>
+
+
